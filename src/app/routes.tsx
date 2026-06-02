@@ -6,29 +6,34 @@ import PatientData from "./pages/PatientData";
 import Confirmation from "./pages/Confirmation";
 import Dashboard from "./pages/Dashboard";
 
-export const router = createBrowserRouter([
+export const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      Component: LandingPage,
+    },
+    {
+      path: "/agendar",
+      Component: SelectDate,
+    },
+    {
+      path: "/agendar/horario",
+      Component: SelectTime,
+    },
+    {
+      path: "/agendar/dados",
+      Component: PatientData,
+    },
+    {
+      path: "/agendar/confirmacao",
+      Component: Confirmation,
+    },
+    {
+      path: "/painel",
+      Component: Dashboard,
+    },
+  ],
   {
-    path: "/",
-    Component: LandingPage,
+    basename: import.meta.env.BASE_URL,
   },
-  {
-    path: "/agendar",
-    Component: SelectDate,
-  },
-  {
-    path: "/agendar/horario",
-    Component: SelectTime,
-  },
-  {
-    path: "/agendar/dados",
-    Component: PatientData,
-  },
-  {
-    path: "/agendar/confirmacao",
-    Component: Confirmation,
-  },
-  {
-    path: "/painel",
-    Component: Dashboard,
-  },
-]);
+);
