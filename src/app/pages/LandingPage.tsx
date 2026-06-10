@@ -26,14 +26,14 @@ export default function LandingPage() {
   const specialties = [
     { icon: Heart, title: "Emagrecimento", description: "Planos personalizados para perda de peso saudável" },
     { icon: Award, title: "Hipertrofia", description: "Nutrição esportiva para ganho de massa muscular" },
-    { icon: CheckCircle2, title: "Reeducação Alimentar", description: "Hábitos saudáveis para toda a vida" },
+    { icon: CheckCircle2, title: "Treino Personalizado", description: "Treinos alinhados ao seu objetivo com base em Educação Física" },
   ];
 
   const benefits = [
     "Atendimento personalizado e humanizado",
     "Planos alimentares individualizados",
     "Acompanhamento contínuo via WhatsApp",
-    "Flexibilidade de horários",
+    "Atendimento on-line e presencial em Ribeirão Claro - PR",
   ];
 
   const testimonials = [
@@ -80,16 +80,25 @@ export default function LandingPage() {
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzIyYzU1ZSIgc3Ryb2tlLW9wYWNpdHk9IjAuMDUiIHN0cm9rZS13aWR0aD0iMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==')] opacity-40"></div>
         
         <div className="max-w-7xl mx-auto relative">
+          <div className="mb-10 flex justify-center md:justify-start">
+            <div className="rounded-2xl overflow-hidden border shadow-lg">
+              <ImageWithFallback
+                src="/images/nara/logo.png"
+                alt="Logotipo Nara Rossetto Nutricionista"
+                className="h-24 w-auto"
+              />
+            </div>
+          </div>
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6 text-center md:text-left">
               <Badge className="bg-primary/10 text-primary border-primary/20">
-                Nutrição Online
+                Nutrição e Treino Personalizado
               </Badge>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                Agende sua consulta nutricional online
+                Agende seu atendimento com Nara Rossetto
               </h1>
               <p className="text-lg text-muted-foreground max-w-xl">
-                Escolha o melhor horário para você e cuide da sua saúde com acompanhamento profissional.
+                Consulta nutricional e acompanhamento presencial ou on-line com atendimento humanizado e focado no seu objetivo.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                 <Button 
@@ -113,11 +122,11 @@ export default function LandingPage() {
               <div className="flex items-center gap-6 text-sm text-muted-foreground justify-center md:justify-start">
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="h-5 w-5 text-primary" />
-                  <span>100% Online</span>
+                  <span>On-line e Presencial</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Clock className="h-5 w-5 text-primary" />
-                  <span>Horários Flexíveis</span>
+                  <span>Ribeirão Claro - PR</span>
                 </div>
               </div>
             </div>
@@ -126,8 +135,8 @@ export default function LandingPage() {
               <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-accent/20 rounded-3xl blur-2xl"></div>
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
                 <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmZW1hbGUlMjBudXRyaXRpb25pc3QlMjBwcm9mZXNzaW9uYWwlMjB3aGl0ZSUyMGNvYXR8ZW58MXx8fHwxNzgwMzU2NTgzfDA&ixlib=rb-4.1.0&q=80&w=1080"
-                  alt="Nutricionista profissional"
+                  src="/images/nara/hero.png"
+                  alt="Nara Rossetto em atendimento"
                   className="w-full h-auto"
                 />
               </div>
@@ -138,22 +147,31 @@ export default function LandingPage() {
 
       {/* About Section */}
       <section id="sobre" className="py-20 px-4 bg-background">
-        <div className="max-w-4xl mx-auto text-center space-y-6">
-          <Badge variant="outline" className="border-primary text-primary">
-            Sobre a Nutricionista
-          </Badge>
-          <h2 className="text-3xl md:text-4xl font-bold">
-            Dra. Juliana Oliveira
-          </h2>
-          <p className="text-lg text-muted-foreground leading-relaxed">
-            Nutricionista formada pela USP com especialização em Nutrição Clínica e Esportiva. 
-            Com mais de 8 anos de experiência, atendo pacientes que buscam emagrecimento, 
-            hipertrofia, reeducação alimentar e melhora da qualidade de vida através da nutrição personalizada.
-          </p>
-          <div className="flex items-center justify-center gap-4 text-sm">
-            <Badge variant="secondary">CRN 12345</Badge>
-            <Badge variant="secondary">8+ anos de experiência</Badge>
-            <Badge variant="secondary">500+ pacientes atendidos</Badge>
+        <div className="max-w-5xl mx-auto grid md:grid-cols-[320px_1fr] gap-8 items-center">
+          <div className="rounded-2xl overflow-hidden border shadow-xl">
+            <ImageWithFallback
+              src="/images/nara/about.png"
+              alt="Foto profissional de Nara Rossetto"
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <div className="text-center md:text-left space-y-6">
+            <Badge variant="outline" className="border-primary text-primary">
+              Sobre a Nutricionista
+            </Badge>
+            <h2 className="text-3xl md:text-4xl font-bold">
+              Nara Rossetto
+            </h2>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              Formada em Educação Física (Bacharelado) e Nutrição, com pós-graduação em Nutrição Esportiva e Estética.
+              Atende pacientes que buscam emagrecimento, hipertrofia, reeducação alimentar, performance e qualidade de vida
+              por meio de um plano integrado de nutrição e treino.
+            </p>
+            <div className="flex flex-wrap items-center justify-center md:justify-start gap-3 text-sm">
+              <Badge variant="secondary">Nutricionista</Badge>
+              <Badge variant="secondary">CREF 038535-G/PR</Badge>
+              <Badge variant="secondary">On-line e Presencial</Badge>
+            </div>
           </div>
         </div>
       </section>
@@ -273,10 +291,10 @@ export default function LandingPage() {
       <section className="py-20 px-4 bg-gradient-to-br from-primary to-primary/80 text-white">
         <div className="max-w-4xl mx-auto text-center space-y-8">
           <h2 className="text-3xl md:text-4xl font-bold">
-            Pronto para transformar sua saúde?
+            Pronta para transformar sua saúde?
           </h2>
           <p className="text-lg text-white/90 max-w-2xl mx-auto">
-            Agende sua primeira consulta agora e comece sua jornada rumo a uma vida mais saudável e equilibrada.
+            Agende sua consulta com a Nara Rossetto e inicie seu plano nutricional com orientação profissional.
           </p>
           <Button 
             size="lg" 
@@ -293,8 +311,16 @@ export default function LandingPage() {
       {/* Footer */}
       <footer className="py-8 px-4 bg-secondary/30 border-t">
         <div className="max-w-7xl mx-auto text-center text-sm text-muted-foreground space-y-3">
-          <p>© 2026 Dra. Juliana Oliveira - Nutricionista. Todos os direitos reservados.</p>
-          <p>CRN 12345 | Nutrição Clínica e Esportiva</p>
+          <div className="flex justify-center">
+            <ImageWithFallback
+              src="/images/nara/portrait.png"
+              alt="Nara Rossetto"
+              className="h-20 w-20 rounded-full object-cover border-2 border-primary/30"
+            />
+          </div>
+          <p>© 2026 Nara Rossetto - Nutricionista. Todos os direitos reservados.</p>
+          <p>CREF 038535-G/PR | Rua Romoaldo Chiarotti, 403 - Ribeirão Claro - PR</p>
+          <p>WhatsApp: (43) 98830-0445 | @nararossetto | naraorossetto@gmail.com</p>
           <Button variant="ghost" size="sm" onClick={() => navigate("/painel")}>
             Painel do nutricionista
           </Button>

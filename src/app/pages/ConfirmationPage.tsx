@@ -30,7 +30,7 @@ export function ConfirmationPage() {
     if (!bookingData.date) return;
     
     const eventTitle = 'Consulta Nutricional';
-    const eventDetails = `Consulta com Dra. Ana Carolina - Objetivo: ${bookingData.goal}`;
+    const eventDetails = `Consulta com Nara Rossetto - Objetivo: ${bookingData.goal}`;
     const startDate = new Date(bookingData.date);
     const [hours, minutes] = bookingData.time.split(':');
     startDate.setHours(parseInt(hours), parseInt(minutes));
@@ -49,7 +49,7 @@ export function ConfirmationPage() {
 
   const handleWhatsApp = () => {
     const message = `Olá! Acabei de agendar minha consulta para ${format(bookingData.date!, "dd/MM/yyyy", { locale: ptBR })} às ${bookingData.time}. Meu nome é ${bookingData.name}.`;
-    const phoneNumber = '5511999999999'; // Número da nutricionista
+    const phoneNumber = '5543988300445';
     window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, '_blank');
   };
 
@@ -118,8 +118,8 @@ export function ConfirmationPage() {
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Profissional</p>
-                    <p className="font-semibold">Dra. Ana Carolina</p>
-                    <p className="text-sm text-muted-foreground">Nutricionista - CRN 12345</p>
+                    <p className="font-semibold">Nara Rossetto</p>
+                    <p className="text-sm text-muted-foreground">Nutricionista | CREF 038535-G/PR</p>
                   </div>
                 </div>
               </div>

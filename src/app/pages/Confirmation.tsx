@@ -38,7 +38,7 @@ export default function Confirmation() {
     endDate.setHours(date.getHours() + 1);
     const endTime = endDate.toISOString().replace(/-|:|\.\d+/g, "");
 
-    const calendarUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=Consulta+Nutricional+-+Dra.+Juliana+Oliveira&dates=${startTime}/${endTime}&details=Consulta+nutricional+online&location=Online`;
+    const calendarUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=Consulta+Nutricional+-+Nara+Rossetto&dates=${startTime}/${endTime}&details=Consulta+nutricional+com+Nara+Rossetto&location=Ribeirao+Claro+-+PR+ou+Online`;
     window.open(calendarUrl, "_blank");
   };
 
@@ -54,7 +54,7 @@ export default function Confirmation() {
     const message = encodeURIComponent(
       `Ola! Acabei de agendar minha consulta para ${formattedDate} as ${appointment.time}. Aguardo mais informacoes!`,
     );
-    window.open(`https://wa.me/5511999999999?text=${message}`, "_blank");
+    window.open(`https://wa.me/5543988300445?text=${message}`, "_blank");
   };
 
   if (!appointment) return null;
@@ -98,7 +98,7 @@ export default function Confirmation() {
                 transition={{ delay: 0.4 }}
                 className="text-muted-foreground mt-2"
               >
-                Sua consulta foi registrada no painel da nutricionista.
+                Sua consulta foi registrada no painel da Nara Rossetto.
               </motion.p>
             </CardHeader>
 
@@ -175,7 +175,7 @@ export default function Confirmation() {
                 <h3 className="font-semibold text-sm">O que fazer agora?</h3>
                 <ul className="space-y-1 text-sm text-muted-foreground">
                   <li>Voce recebera as orientacoes da consulta pelo WhatsApp.</li>
-                  <li>O link da videochamada sera enviado antes do horario agendado.</li>
+                  <li>No atendimento on-line, o link da videochamada sera enviado antes do horario agendado.</li>
                   <li>Prepare suas duvidas e informacoes sobre sua rotina alimentar.</li>
                 </ul>
               </motion.div>
