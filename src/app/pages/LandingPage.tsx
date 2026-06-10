@@ -22,6 +22,7 @@ import {
 
 export default function LandingPage() {
   const navigate = useNavigate();
+  const assetBase = import.meta.env.BASE_URL;
 
   const specialties = [
     { icon: Heart, title: "Emagrecimento", description: "Planos personalizados para perda de peso saudável" },
@@ -83,7 +84,7 @@ export default function LandingPage() {
           <div className="mb-10 flex justify-center md:justify-start">
             <div className="rounded-2xl overflow-hidden border shadow-lg">
               <ImageWithFallback
-                src="/images/nara/logo.png"
+                src={`${assetBase}images/nara/logo.png`}
                 alt="Logotipo Nara Rossetto Nutricionista"
                 className="h-24 w-auto"
               />
@@ -135,7 +136,7 @@ export default function LandingPage() {
               <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-accent/20 rounded-3xl blur-2xl"></div>
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
                 <ImageWithFallback
-                  src="/images/nara/hero.png"
+                  src={`${assetBase}images/nara/hero.png`}
                   alt="Nara Rossetto em atendimento"
                   className="w-full h-auto"
                 />
@@ -150,7 +151,7 @@ export default function LandingPage() {
         <div className="max-w-5xl mx-auto grid md:grid-cols-[320px_1fr] gap-8 items-center">
           <div className="rounded-2xl overflow-hidden border shadow-xl">
             <ImageWithFallback
-              src="/images/nara/about.png"
+              src={`${assetBase}images/nara/about.png`}
               alt="Foto profissional de Nara Rossetto"
               className="w-full h-full object-cover"
             />
@@ -313,7 +314,7 @@ export default function LandingPage() {
         <div className="max-w-7xl mx-auto text-center text-sm text-muted-foreground space-y-3">
           <div className="flex justify-center">
             <ImageWithFallback
-              src="/images/nara/portrait.png"
+              src={`${assetBase}images/nara/portrait.png`}
               alt="Nara Rossetto"
               className="h-20 w-20 rounded-full object-cover border-2 border-primary/30"
             />
